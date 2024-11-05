@@ -1,0 +1,8 @@
+server:
+  port: 8080
+database:
+  host: "dbproduction.example.com"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  database: "api-rest-jwt-prod"
