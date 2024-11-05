@@ -25,8 +25,7 @@ type DatabaseConfig struct {
 
 var AppConfig Config
 
-func loadConfigFile(fileConfigName string) error {
-	viper.SetConfigName(fmt.Sprintf("config.%s", fileConfigName))
+func loadConfigFile() error {
 	viper.SetConfigType("yaml")
 	viper.AddConfigPath("../../configs")
 	viper.SetConfigName("config")
@@ -39,7 +38,7 @@ func loadConfigFile(fileConfigName string) error {
 }
 
 func LoadConfig(fileConfigName string) error {
-	if err := loadConfigFile(fileConfigName); err != nil {
+	if err := loadConfigFile(); err != nil {
 		return err
 	}
 
